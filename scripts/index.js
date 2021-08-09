@@ -10,8 +10,9 @@ function generateCanvas() {
 
 generateCanvas();
 
-//painting each individual block
 const allblocks = canvas.querySelectorAll("div");
+
+//painting each individual block
 allblocks.forEach(function(element) {
     element.addEventListener("pointerover", function() {
         element.setAttribute("style", "background-color: black;");
@@ -19,8 +20,13 @@ allblocks.forEach(function(element) {
 });
 
 //reset canvas
-resetbutton.onclick = function() {
+resetbutton.addEventListener("mousedown", () => {
     allblocks.forEach(function(element) {
         element.setAttribute("style", "background-color: white;");
     });
-};
+});
+
+//detect if device is touchscreen
+if ("ontouchstart" in document.documentElement) {
+    alert("Touchscreens are not supported, please use a desktop browser.");
+}

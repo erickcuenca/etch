@@ -1,6 +1,8 @@
 html {
     background-color: rgb(92, 92, 92);
     height: 100%;
+    min-width: 300px;
+    min-height: 300px;
 }
 body {
     height: 100%;
@@ -36,4 +38,21 @@ body {
     background-color: rgb(255, 0, 0);
     color: white;
 }
+#title {
+    font-family: monospace;
+    color: white;
+    font-size: 2rem;
+}
 
+@media screen and (max-width: 700px) {
+    #canvas {
+        grid-template-columns: repeat(32, .5rem);
+        grid-template-rows: repeat(32, .5rem);
+    }
+}
+@media screen and (max-height: 700px) {
+    #canvas {
+        grid-template-columns: repeat(32, .25rem);
+        grid-template-rows: repeat(32, .25rem);
+    }
+}
