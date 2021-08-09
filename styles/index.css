@@ -1,0 +1,39 @@
+html {
+    background-color: rgb(92, 92, 92);
+    height: 100%;
+}
+body {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#canvas {
+    border: solid 10px rgb(238, 238, 238);
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(32, 1rem);
+    grid-template-rows: repeat(32, 1rem);
+}
+#canvas div {
+    background-color: white;
+}
+
+#reset {
+    all: unset;
+    background-color: white;
+    font-family: monospace;
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+#reset:hover {
+    background-color: rgb(187, 186, 186);
+    cursor: pointer;
+}
+#reset:active {
+    background-color: rgb(255, 0, 0);
+    color: white;
+}
+
